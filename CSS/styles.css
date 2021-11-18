@@ -49,6 +49,7 @@ p {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  
 }
 
 
@@ -174,6 +175,13 @@ body {
   color: var(--accent); 
 }
 
+/* Работает, но не нравится */
+
+.header-contacts-link:hover .header-icon, 
+.header-contacts-link:focus .header-icon { 
+  color: var(--accent); 
+}
+
 .header-list-navigation, 
 .header-contacts-list { 
   display: flex;
@@ -182,10 +190,6 @@ body {
 }
 
 
-/* .header-list-navigation>.header-item:not(:last-child) ,
-.header-contacts-list>.header-item:not(:last-child) {
-  margin-right: 50px;
-} */
 .header-list-navigation .header-item +.header-item,
 .header-contacts-list .header-item + .header-item { 
   margin-left: 50px;
@@ -196,9 +200,19 @@ body {
 }
 
 .header-link, .header-contacts-link { 
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px; 
+  align-items: center;
+}
+
+.header-icon { 
+  margin-right: 10px;
+  color: var(--second-text);
+}
+
+.header-tel-icon, .header-mail-icon { 
+  fill: currentColor;
 }
 
 /*----------------------------- Футер------------------------ */
@@ -230,6 +244,13 @@ body {
 
   padding-top: 200px;
   padding-bottom: 200px;
+
+  background-image:
+   linear-gradient(rgba(47, 48, 58, 0.4),
+   rgba(47, 48, 58, 0.4)),
+   url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
   
 }
 .hero-title { 
