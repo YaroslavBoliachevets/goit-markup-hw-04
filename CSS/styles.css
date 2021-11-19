@@ -24,6 +24,7 @@
 
   --portfolio-filter:#F5F4FA;
 
+  --icon-color: #AFB1B8; 
   
   ; 
 }
@@ -116,9 +117,6 @@ body {
 
 .header-logo { 
   text-decoration: none;
- 
-  /* padding-top: 24px;
-  padding-bottom: 25px; */
 
   color: var(--main-text);
   font-family: Raleway;
@@ -145,6 +143,20 @@ body {
   color: var(--accent);
 }
 
+/* полоска под навигацией   */
+
+/* .header-item .current{ 
+  display: flex;
+}
+.current::after {
+  content: '';
+  width: 48px;
+  height: 4px;
+  background-color: var(--accent);
+  flex-direction: column;
+  margin: 0 auto;
+
+} */
 
 
 
@@ -216,11 +228,18 @@ body {
 }
 
 /*----------------------------- Футер------------------------ */
-.footer { 
+.footer.main { 
   background-color: var(--third-background);
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+.footer-right-container { 
+  margin-left: 70px;
+  padding-top: 12px;
+}
+
+
 
 .footer-list .footer-link { 
   color: rgba(255,255,255,0.6) ;
@@ -230,9 +249,62 @@ body {
   color: var(--third-text);
 }
 
+.container.footer{
+  display: flex;
+  
+}
+
 .footer-item:nth-child(-n+2) {
   margin-bottom: 8px;
   
+}
+
+.footer-title-link { 
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--third-text);
+  margin-bottom: 16px;
+  text-align: center;
+  
+}
+
+.footer-social-list { 
+  display: flex;
+}
+
+.footer-social-item { 
+  width: 44px;
+  height: 44px;
+  background-color: rgba(225,225,225, 0.1);
+  border-radius: 50%;
+}
+.footer-social-item:nth-child(n+2) { 
+  margin-left: 10px;
+}
+
+/* Работает но не оч */
+.footer-social-item:hover ,
+.footer-social-item:focus { 
+  background-color: var(--accent);
+}
+
+
+
+.footer-social-link { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+}
+
+.footer-socail-icon { 
+  width: 22px;
+  height: 22px;
+  fill: var(--third-text);
 }
 
 
@@ -311,6 +383,8 @@ body {
 }
 
 
+
+
 .feature-title { 
   font-size: 14px;
   font-weight: 700;
@@ -319,6 +393,13 @@ body {
 
   margin: 0 0 10px 0;
 }
+ 
+.feature-icon {
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+}
+
 
 .feature-text {
   color: var(--second-text);
@@ -394,13 +475,88 @@ body {
   text-align: center;
 
   padding: 0;
-  margin: 0;
+  margin: 0 0 16px 0;
  }
 
  .team-picture { 
-   margin: 0 0 30px 0;
-  
+   margin: 0 0 16px 0;
  }
+
+ .social-list { 
+   display: flex;
+   justify-content: center;
+ }
+
+
+.social-item { 
+  padding: 12px;
+  width: 44px;
+  height: 44px;
+  
+  border-radius: 50%; 
+}
+
+
+.social-item:nth-child(n+2) { 
+  margin-left: 10px;
+}
+
+/* Работает но не нравится */
+.social-item:hover,
+.social-item:focus { 
+  background-color: var(--accent);
+}
+
+.social-item:hover .social-box,
+.social-item:focus .social-box { 
+  fill: var(--third-text);
+}
+
+.social-box { 
+  width: 20px;
+  height: 20px;
+  fill: var(--icon-color);
+  
+}
+
+
+/*-------------------------Клиенты компании------------------*/
+.clients.section { 
+  padding-top: 94px;
+} 
+
+.clients-list { 
+  display: flex;
+}
+.clients-item { 
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+.clients-item:nth-child(n+2) { 
+  margin-left: 30px;
+}
+
+.clients-item:hover .clients-icon,
+.clients-item:focus .clients-icon { 
+  fill: var(--accent);
+}
+
+.clients-link { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+}
+
+.clients-icon { 
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
+}
+
+
 
 
 /*-------------- Portfolio.html Стилизация фильтра------------ */
