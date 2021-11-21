@@ -172,6 +172,11 @@ body {
 
 }
 
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
 .header-contacts-link { 
   color: var(--second-text);
 }
@@ -213,8 +218,6 @@ body {
 
 .header-link, .header-contacts-link { 
   display: inline-flex;
-  padding-top: 32px;
-  padding-bottom: 32px; 
   align-items: center;
 }
 
@@ -286,10 +289,13 @@ body {
   margin-left: 10px;
 }
 
+
 /* Работает но не оч */
 .footer-social-item:hover ,
-.footer-social-item:focus { 
+.footer-social-link:focus { 
   background-color: var(--accent);
+  border-radius: 50%;
+  outline: none;
 }
 
 
@@ -381,7 +387,17 @@ body {
   margin-left: 30px;
 }
 
+.feature-icon-container { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
+  width: 270px;
+  height: 120px;
+
+  margin-bottom: 30px;
+}
 
 
 .feature-title { 
@@ -391,12 +407,6 @@ body {
   text-transform: uppercase;
 
   margin: 0 0 10px 0;
-}
- 
-.feature-icon {
-  width: 270px;
-  height: 120px;
-  padding: 25px 100px;
 }
 
 
@@ -486,9 +496,13 @@ body {
    justify-content: center;
  }
 
+ 
 
 .social-item { 
-  padding: 12px;
+  /* display: inline-flex;
+  justify-content: center;
+  align-items: center; */
+  
   width: 44px;
   height: 44px;
   
@@ -500,9 +514,19 @@ body {
   margin-left: 10px;
 }
 
+.social-link-container { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 44px;
+  height: 44px;
+}
+
+
 /* Работает но не нравится */
 .social-item:hover,
-.social-item:focus { 
+.social-link:focus { 
   background-color: var(--accent);
 }
 
@@ -513,7 +537,7 @@ body {
 
 .social-box { 
   fill: var(--icon-color);
-  
+ 
 }
 
 
@@ -536,9 +560,14 @@ body {
 }
 
 .clients-item:hover .clients-icon,
-.clients-item:focus .clients-icon { 
+.clients-link:focus .clients-icon { 
   fill: var(--accent);
 }
+
+.clients-item:hover, .clients-link:focus {
+  outline: none;
+  border: 1px solid rgba(33, 150, 243, 1);
+ }
 
 .clients-link { 
   display: flex;
@@ -563,16 +592,13 @@ body {
   
 }
 
-.filter-item {
-
-}
-
 
 .filter-item:nth-child(n+2) {
   margin-left: 30px;
 }
 
 .list .filter-btn:hover, .list .filter-btn:focus { 
+  outline: none;
   background-color: var(--accent);
   color: var(--third-text);
   box-shadow: 0px 3px 1px #0000001A, 0px 1px 2px #00000014, 
@@ -617,7 +643,8 @@ body {
 }
 
 .portfolio-item:hover, 
-.portfolio-item:focus { 
+.portfolio-link:focus { 
+  outline: none;
   box-shadow: 0px 1px 1px #0000001F,
   0px 4px 4px #0000000F, 
   1px 4px 6px #00000029  ;
