@@ -302,8 +302,7 @@ body {
 }
 
 .footer-socail-icon { 
-  width: 22px;
-  height: 22px;
+
   fill: var(--third-text);
 }
 
@@ -513,8 +512,6 @@ body {
 }
 
 .social-box { 
-  width: 20px;
-  height: 20px;
   fill: var(--icon-color);
   
 }
@@ -551,8 +548,6 @@ body {
 }
 
 .clients-icon { 
-  width: 106px;
-  height: 60px;
   fill: var(--icon-color);
 }
 
@@ -621,6 +616,12 @@ body {
   margin-bottom: 0;
 }
 
+.portfolio-item:hover, 
+.portfolio-item:focus { 
+  box-shadow: 0px 1px 1px #0000001F,
+  0px 4px 4px #0000000F, 
+  1px 4px 6px #00000029  ;
+}
 
 
 .portfolio-link {
