@@ -219,6 +219,7 @@ body {
 .header-link, .header-contacts-link { 
   display: inline-flex;
   align-items: center;
+  justify-items: center;
 }
 
 .header-icon { 
@@ -514,7 +515,7 @@ body {
   margin-left: 10px;
 }
 
-.social-link-container { 
+.social-link { 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -527,11 +528,13 @@ body {
 /* Работает но не нравится */
 .social-item:hover,
 .social-link:focus { 
+  outline: none;
+  border-radius: 50%;
   background-color: var(--accent);
 }
 
 .social-item:hover .social-box,
-.social-item:focus .social-box { 
+.social-link:focus .social-box { 
   fill: var(--third-text);
 }
 
